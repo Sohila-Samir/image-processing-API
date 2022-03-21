@@ -2,10 +2,10 @@
   "name": "configtests",
   "version": "1.0.0",
   "description": "",
-  "main": "./dist/server.js",
+  "main": ".",
   "type": "module",
   "scripts": {
-    "Start": "node .",
+    "Start": "node ./dist/server.js",
     "lint": "eslint ./src/**/*.ts ./dist/**/*.js",
     "prettier": "prettier --config .prettierrc ./src/**/*.ts ./dist/**/**.js --write",
     "build": "npx tsc",
