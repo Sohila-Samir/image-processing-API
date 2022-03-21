@@ -2,14 +2,15 @@
   "name": "configtests",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "type": "module",
   "scripts": {
+    "Start": "node .",
     "lint": "eslint ./src/**/*.ts ./dist/**/*.js",
     "prettier": "prettier --config .prettierrc ./src/**/*.ts ./dist/**/**.js --write",
     "build": "npx tsc",
     "test": "jasmine ./dist/**/*.js --color",
-    "start": "npm run build && npm run test",
+    "b&tt": "npm run build && npm run test",
     "all": "npm run start && npm run lint && npm run prettier && nodemon dist/."
   },
   "keywords": [],
