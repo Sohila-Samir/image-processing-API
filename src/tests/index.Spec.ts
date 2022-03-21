@@ -1,4 +1,4 @@
-import app from '../index.js';
+import app from '../server.js';
 import supertest from 'supertest';
 
 const request = supertest(app);

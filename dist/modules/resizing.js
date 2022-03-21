@@ -16,20 +16,20 @@ const resizingProcess = (req, res, next) => {
             if (cache.has('resizedImg') && cache.get('resizedImg') === requestedImg) {
                 res.render('already-resized', { info: 'image is already resized.', imgWidth, imgHeight, imgName });
                 //in case we dont have the same requested resized image, generate a new one
-            } else {
+            }
+            else {
                 await sharp(path.join(__dirname, `../../puplic/images/full/${imgName}.jpg`))
                     .resize(imgWidth, imgHeight)
                     .toFormat('png')
-                    .toFile(
-                        path.join(__dirname, `../../puplic/images/thumb/${imgName}-${imgWidth}-${imgHeight}-thumb.png`)
-                    )
+                    .toFile(path.join(__dirname, `../../puplic/images/thumb/${imgName}-${imgWidth}-${imgHeight}-thumb.png`))
                     .then(() => {
-                        res.render('display', { imgName, imgWidth, imgHeight });
-                        res.end();
-                    });
+                    res.render('display', { imgName, imgWidth, imgHeight });
+                    res.end();
+                });
                 cache.set('resizedImg', requestedImg);
             }
-        } catch (err) {
+        }
+        catch (err) {
             res.render('error', { err });
             console.log(err);
         }
