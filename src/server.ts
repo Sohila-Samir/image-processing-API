@@ -16,7 +16,7 @@ const __dirname: string = dirname(__filename);
 
 //setting up the server
 const app: express.Application = express();
-const port = process.env.PORT || 2021;
+const port: number = (process.env.PORT as unknown as number) || 2021;
 
 //setting up ejs and serving the views directory
 app.set('views', path.join(__dirname, '../puplic/views') as string) as unknown;
@@ -30,7 +30,7 @@ app.listen(port, (): void => {
 /*--------------------------------------------------------------------------------------------------end of setup*/
 
 //using routes
-app.use(imageProcessing);
 app.use(mainRoute);
+app.use(imageProcessing);
 
 export default app;
