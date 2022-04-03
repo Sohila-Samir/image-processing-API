@@ -8,6 +8,7 @@ import express from 'express';
 import imageProcessing from './routes/image-processing.js'; //image-processing route
 import mainRoute from './routes/home.js'; //home/main route
 import { Server } from 'http';
+import 'dotenv/config';
 
 //globals
 const __filename: string = fileURLToPath(import.meta.url);
