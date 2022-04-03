@@ -1,11 +1,11 @@
 {
-  "name": "configtests",
+  "name": "image-processing-api",
   "version": "1.0.0",
   "description": "",
   "main": ".",
   "type": "module",
   "scripts": {
-    "Start": "node ./dist/server.js",
+    "Start": "node dist/server.js",
     "lint": "eslint ./src/**/*.ts ./dist/**/*.js",
     "prettier": "prettier --config .prettierrc ./src/**/*.ts ./dist/**/**.js --write",
     "build": "npx tsc",
