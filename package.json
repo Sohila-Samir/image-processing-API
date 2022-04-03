@@ -5,7 +5,7 @@
   "main": ".",
   "type": "module",
   "scripts": {
-    "Start": "node dist/server.js",
+    "start": "node dist/server.js",
     "lint": "eslint ./src/**/*.ts ./dist/**/*.js",
     "prettier": "prettier --config .prettierrc ./src/**/*.ts ./dist/**/**.js --write",
     "build": "npx tsc",
